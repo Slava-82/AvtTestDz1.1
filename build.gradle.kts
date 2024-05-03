@@ -1,3 +1,5 @@
+//import jdk.nashorn.internal.objects.NativeRegExp.test
+
 plugins {
     id("java")
 }
@@ -10,10 +12,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.testng:testng:7.1.0")
 }
 
 tasks.test {
-    useJUnitPlatform()
+    useTestNG()
 }
